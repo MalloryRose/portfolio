@@ -20,7 +20,7 @@ const projectsData = [
     description: "A winning business model for a cross-platform mobile application using React Native, Node.js, and PostgreSQL that helps travelers with chronic conditions navigate foreign healthcare systems, addressing the needs of 1.4 billion global travelers and securing first place in a Berlin Startup Community competition with the highest product valuation among 15 competitors.",
     image: "/images/projects/MediConnect_Image.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://www.canva.com/design/DAGLw1QBR_U/GIHT0kiq7_oisow5E2bUHA/edit?utm_content=DAGLw1QBR_U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     previewUrl: "/",
   },
   {
