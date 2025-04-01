@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FaLinkedin, FaGithub } from "react-icons/fa"; // Import icons
 
 const HeroSection = () => {
   return (
@@ -19,15 +20,9 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
-              sequence={[
-                "Mallory",
-                1000,
-                "Computer Engineer",
-                1000,
-            
-              ]}
+              sequence={["Mallory", 1000, "Computer Engineer", 1000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -52,20 +47,31 @@ const HeroSection = () => {
               </span>
             </Link>
           </div>
+          
+          {/* Social Icons aligned with "Hire Me" button */}
+          <div className="flex items-center space-x-6 mt-6">
+            <Link href="https://www.linkedin.com/in/mallory-silva-239016208/" target="_blank">
+              <FaLinkedin className="text-white text-5xl hover:text-blue-500 transition-colors" />
+            </Link>
+            <Link href="https://github.com/MalloryRose" target="_blank">
+              <FaGithub className="text-white text-5xl hover:text-gray-500 transition-colors" />
+            </Link>
+          </div>
+
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden border-4 border-pink-300">
             <Image
-              src="/images/hero-image.png"
+              src="/images/Mallory-Headshot.jpg"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              className="w-full h-full object-cover rounded-full border-4 border-[#FF1493]"
+              layout="fill"
             />
           </div>
         </motion.div>

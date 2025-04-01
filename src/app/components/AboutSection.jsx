@@ -8,7 +8,8 @@ const TAB_DATA = [
     title: "Software Skills",
     id: "software_skills",
     content: (
-      <ul className="list-disc pl-2">
+      <div className="grid grid-cols-3 gap-4">
+      <ul className="list-disc pl-4">
         <li>C++</li>
         <li>Python</li>
         <li>JavaScript</li>
@@ -22,6 +23,8 @@ const TAB_DATA = [
         <li>Node.js</li>
         <li>Express.js</li>
         <li>Next.js</li>
+      </ul>
+      <ul className="list-disc pl-4">
         <li>MongoDB</li>
         <li>PostgreSQL</li>
         <li>SQLDelight</li>
@@ -35,6 +38,8 @@ const TAB_DATA = [
         <li>Canvas LMS API</li>
         <li>NumPy</li>
         <li>Pandas</li>
+      </ul>
+      <ul className="list-disc pl-4">
         <li>TensorFlow</li>
         <li>Matplotlib</li>
         <li>Scikit-learn</li>
@@ -50,6 +55,7 @@ const TAB_DATA = [
         <li>.NET</li>
         <li>QTCreator</li>
       </ul>
+    </div>
     ),
   },
 
@@ -122,7 +128,7 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/about-image.png" width={500} height={500} alt="" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
