@@ -22,7 +22,7 @@ const HeroSection = () => {
             </span>
             <br />
             <TypeAnimation
-              sequence={["Mallory Silva", 1000, "Computer Engineer", 1000]}
+              sequence={["Mallory Silva", 1000, "a Computer Engineer", 1000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -48,15 +48,15 @@ const HeroSection = () => {
             </Link>
           </div>
           
-          {/* Social Icons aligned with "Hire Me" button */}
           <div className="flex items-center space-x-6 mt-6">
-            <Link href="https://www.linkedin.com/in/mallory-silva-239016208/" target="_blank">
-              <FaLinkedin className="text-white text-5xl hover:text-blue-500 transition-colors" />
-            </Link>
-            <Link href="https://github.com/MalloryRose" target="_blank">
-              <FaGithub className="text-white text-5xl hover:text-gray-500 transition-colors" />
-            </Link>
-          </div>
+          <a href="https://www.linkedin.com/in/mallory-silva-239016208/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-white text-5xl hover:text-blue-500 transition-colors" />
+          </a>
+          <a href="https://github.com/MalloryRose" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-white text-5xl hover:text-gray-500 transition-colors" />
+          </a>
+        </div>
+
 
         </motion.div>
 

@@ -32,18 +32,36 @@ const projectsData = [
     gitUrl: "https://github.com/HelpHubGroup/HelpHub",
     previewUrl: "/",
   },
+  {
+    id: 5,
+    title: "32-bit MIPS Processor",
+    description: "A 32-bit MIPS processor implementation in VHDL that features a multi-cycle architecture, 256-word RAM with memory-mapped I/O, and supports a comprehensive subset of the MIPS instruction set including arithmetic, logical, memory access, and control flow operations.",
+    image: "/images/projects/MIPS-architecture.png",
+    tag: ["All", "Hardware"],
+    gitUrl: "https://github.com/MalloryRose/MIPS",
+    previewUrl: "/",
+  },
   
   {
-    id: 4,
+    id: 6,
     title: "Bootloader Development",
     description: "Custom bootloaders for both x86 and ARM platforms. The bootloaders were designed to load and display a message from an external file bin file through the UART protocol, which required work with low-level assembly programming, memory-mapped I/O, and system initialization.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Hardware"],
     gitUrl: "https://github.com/MalloryRose/Bootloader",
     previewUrl: "/",
   },
   {
-    id: 5,
+    id: 7,
+    title: "Synchronous Serial Communication with SPI",
+    description: "Developed a real-time 3D acceleration data acquisition system by configuring the ATxmega128A1U microcontroller to communicate with an LSM6DSL IMU via SPI, visualizing sensor data using SerialPlot over UART-to-USB, and verifying transmission with a logic analyzer.",
+    image: "/images/projects/SPI.png",
+    tag: ["All", "Hardware"],
+    gitUrl: "https://github.com/MalloryRose/SPI",
+    previewUrl: "/",
+  },
+  {
+    id: 8,
     title: "Minesweeper",
     description: "Classic game of Minesweeper re-developed in C++",
     image: "/images/projects/Minesweeper.jpg",
@@ -51,15 +69,7 @@ const projectsData = [
     gitUrl: "https://github.com/MalloryRose/MineSweeper/tree/master",
     previewUrl: "/",
   },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+ 
 ];
 
 const ProjectsSection = () => {
@@ -100,6 +110,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
+        />
+          <ProjectTag
+          onClick={handleTagChange}
+          name="Hardware"
+          isSelected={tag === "All"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
