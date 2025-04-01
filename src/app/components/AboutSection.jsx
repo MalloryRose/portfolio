@@ -102,13 +102,13 @@ const TAB_DATA = [
 
 
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Achievements",
+    id: "Achievements",
     content: (
       <ul className="list-disc pl-2">
-        <li>
-        Microsoft Technology Associate: Database Administration Fundamentals (MTA)</li>
-        <li>Certified SOLIDWORKS Associate</li>
+        <li>Herbert Wertheim College of Engineering Dean&apos;s List</li>
+        <li>1st place in a Berlin Startup Community competition for MediConnect</li>
+        <li>Graduating  Magna Cum Laude</li>
  
       </ul>
     ),
@@ -171,11 +171,11 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("Achievements")}
+              active={tab === "Achievements"}
             >
               {" "}
-              Certifications{" "}
+              Achievements{" "}
             </TabButton>
           </div>
           <div className="mt-8">

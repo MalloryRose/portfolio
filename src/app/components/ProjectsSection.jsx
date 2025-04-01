@@ -13,6 +13,7 @@ const projectsData = [
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Anthony42540/GatorFieldNotebook",
     previewUrl: "/",
+    techArray: ["Kotlin", "Android", "iOS", "GPS", "API", "Firebase", "SQLDelight"]
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const projectsData = [
     tag: ["All", "Mobile"],
     gitUrl: "https://www.canva.com/design/DAGLw1QBR_U/GIHT0kiq7_oisow5E2bUHA/edit?utm_content=DAGLw1QBR_U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     previewUrl: "/",
+    techArray: ["React", "Node.js", "PostgreSQL", "Business Model"]
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/HelpHubGroup/HelpHub",
     previewUrl: "/",
+    techArray: ["React", "MongoDB", "Express.js", "JWT Authentication"]
   },
   {
     id: 5,
@@ -40,8 +43,8 @@ const projectsData = [
     tag: ["All", "Hardware"],
     gitUrl: "https://github.com/MalloryRose/MIPS",
     previewUrl: "/",
+    techArray: ["VHDL", "ModelSim", "Quartus Prime ", "Hardware Design"]
   },
-  
   {
     id: 6,
     title: "Bootloader Development",
@@ -50,6 +53,7 @@ const projectsData = [
     tag: ["All", "Hardware"],
     gitUrl: "https://github.com/MalloryRose/Bootloader",
     previewUrl: "/",
+    techArray: ["Assembly", "x86", "ARM", "UART"]
   },
   {
     id: 7,
@@ -59,6 +63,9 @@ const projectsData = [
     tag: ["All", "Hardware"],
     gitUrl: "https://github.com/MalloryRose/SPI",
     previewUrl: "/",
+    techArray: ["Embedded C", "SerialPlot", "SPI", "UART", "IMU", 
+      "Microprocessors"
+    ]
   },
   {
     id: 8,
@@ -68,9 +75,10 @@ const projectsData = [
     tag: ["All"],
     gitUrl: "https://github.com/MalloryRose/MineSweeper/tree/master",
     previewUrl: "/",
+    techArray: ["C++", "SFML", "Game Development"]
   },
- 
 ];
+
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
@@ -113,7 +121,7 @@ const ProjectsSection = () => {
         />
           <ProjectTag
           onClick={handleTagChange}
-          name="Hardware"
+          name="Hardware/Embedded"
           isSelected={tag === "All"}
         />
       </div>
@@ -133,6 +141,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              techStack={project.techArray}
             />
           </motion.li>
         ))}
