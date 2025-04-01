@@ -46,7 +46,7 @@ const projectsData = [
     id: 6,
     title: "Bootloader Development",
     description: "Custom bootloaders for both x86 and ARM platforms. The bootloaders were designed to load and display a message from an external file bin file through the UART protocol, which required work with low-level assembly programming, memory-mapped I/O, and system initialization.",
-    image: "/images/projects/4.png",
+    image: "/images/projects/Bootloader.png",
     tag: ["All", "Hardware"],
     gitUrl: "https://github.com/MalloryRose/Bootloader",
     previewUrl: "/",
