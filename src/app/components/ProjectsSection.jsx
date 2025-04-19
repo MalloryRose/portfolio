@@ -13,7 +13,7 @@ const projectsData = [
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Anthony42540/GatorFieldNotebook",
     previewUrl: "/",
-    techArray: ["Kotlin", "Android", "iOS", "GPS", "API", "Firebase", "SQLDelight"]
+    techArray: ["Kotlin", "Android", "iOS", "API", "Firebase", "SQLDelight"]
   },
   {
     id: 2,
@@ -36,11 +36,21 @@ const projectsData = [
     techArray: ["React", "MongoDB", "Express.js", "JWT Authentication"]
   },
   {
+    id: 4,
+    title: "SwampyBird",
+    description: "Swampy Bird is a University of Florida-themed Flappy Bird-inspired game developed with the Java-based graphics platform Processing, where players guide a Sandhill Crane through tree obstacles in a swampy environment, featuring light/dark modes, adjustable difficulty, and custom visuals and audio.",
+    image: "/images/projects/swampy-bird.png",
+    tag: ["All", "Games"],
+    gitUrl: "https://github.com/MalloryRose/Swampy-Bird",
+    previewUrl: "/",
+    techArray: ["Processing", "Java", "Game Development"]
+  },
+  {
     id: 5,
     title: "32-bit MIPS Processor",
     description: "A 32-bit MIPS processor implementation in VHDL that features a multi-cycle architecture, 256-word RAM with memory-mapped I/O, and supports a comprehensive subset of the MIPS instruction set including arithmetic, logical, memory access, and control flow operations.",
     image: "/images/projects/MIPS-architecture.png",
-    tag: ["All", "Hardware"],
+    tag: ["All", "Hardware/Embedded"],
     gitUrl: "https://github.com/MalloryRose/MIPS",
     previewUrl: "/",
     techArray: ["VHDL", "ModelSim", "Quartus Prime ", "Hardware Design"]
@@ -50,7 +60,7 @@ const projectsData = [
     title: "Bootloader Development",
     description: "Custom bootloaders for both x86 and ARM platforms. The bootloaders were designed to load and display a message from an external file bin file through the UART protocol, which required work with low-level assembly programming, memory-mapped I/O, and system initialization.",
     image: "/images/projects/Bootloader.png",
-    tag: ["All", "Hardware"],
+    tag: ["All", "Hardware/Embedded"],
     gitUrl: "https://github.com/MalloryRose/Bootloader",
     previewUrl: "/",
     techArray: ["Assembly", "x86", "ARM", "UART"]
@@ -60,7 +70,7 @@ const projectsData = [
     title: "Synchronous Serial Communication with SPI",
     description: "Developed a real-time 3D acceleration data acquisition system by configuring the ATxmega128A1U microcontroller to communicate with an LSM6DSL IMU via SPI, visualizing sensor data using SerialPlot over UART-to-USB, and verifying transmission with a logic analyzer.",
     image: "/images/projects/SPI.png",
-    tag: ["All", "Hardware"],
+    tag: ["All", "Hardware/Embedded"],
     gitUrl: "https://github.com/MalloryRose/SPI",
     previewUrl: "/",
     techArray: ["Embedded C", "SerialPlot", "SPI", "UART", "IMU", 
@@ -72,7 +82,7 @@ const projectsData = [
     title: "Minesweeper",
     description: "Classic game of Minesweeper re-developed in C++",
     image: "/images/projects/Minesweeper.jpg",
-    tag: ["All"],
+    tag: ["All", "Games"],
     gitUrl: "https://github.com/MalloryRose/MineSweeper/tree/master",
     previewUrl: "/",
     techArray: ["C++", "SFML", "Game Development"]
@@ -122,7 +132,12 @@ const ProjectsSection = () => {
           <ProjectTag
           onClick={handleTagChange}
           name="Hardware/Embedded"
-          isSelected={tag === "All"}
+          isSelected={tag === "Hardware/Embedded"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Games"
+          isSelected={tag === "Games"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
